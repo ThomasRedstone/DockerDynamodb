@@ -4,7 +4,7 @@ ENV refreshed_at 2016-09-15
 
 RUN mkdir /opt/dynamodb_local
 RUN mkdir /var/dynamodb_data
-RUN wget -q -O - http://dynamodb-local.s3-website-us-west-2.amazonaws.com/dynamodb_local_2016-05-17.tar.gz | tar -xzf - -C /opt/dynamodb_local
+RUN wget -q -O - https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_latest.tar.gz | tar -xzf - -C /opt/dynamodb_local
 
 WORKDIR /opt/dynamodb_local
 VOLUME ["/var/dynamodb_data"]
